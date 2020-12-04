@@ -1,2 +1,3 @@
 # react-ui-component
-React UI Componenet Library
+
+> 基于 Typescruot 的 React UI 组件库
