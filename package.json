@@ -1,0 +1,19 @@
+{
+  "name": "react-ui-component",
+  "version": "1.0.0",
+  "description": "> 基于 Typescruot 的 React UI 组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robbiemie/react-ui-component.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robbiemie/react-ui-component/issues"
+  },
+  "homepage": "https://github.com/robbiemie/react-ui-component#readme"
+}
