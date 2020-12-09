@@ -5,3 +5,36 @@ $blue:  #0d6efd !default;
 
 // 主题色
 $primary: $blue !default;
+
+// 字体大小
+$font-size-base: 1rem !default;
+$font-size-lg: $font-size-base * 1.25  !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+
+// 自重
+$font-weight-normal:  400 !default;
+$font-weight-light:  400 !default;
+$font-weight-bold:  400 !default;
+
+// 行高
+$line-height-base:  1.5 !default;
+$line-height-lg:  2 !default;
+$line-height-sm:  1.25 !default;
+
+// 标题大小
+$h1-font-size: $font-size-base * 2.5  !default;
+$h2-font-size: $font-size-base * 2  !default;
+$h3-font-size: $font-size-base * 1.75  !default;
+$h4-font-size: $font-size-base * 1.5  !default;
+$h5-font-size: $font-size-base * 1.25  !default;
+$h6-font-size: $font-size-base  !default;
+
+// 链接
+$link-color:  $primary !default;
+$link-decoration:  none !default;
+$link-hover-color:  darken($link-color, 15%) !default;
+$link-hover-decoration:  underline !default;
+
+// body
+$body-bg: $white !default;
+$body-text-align: null !default;
