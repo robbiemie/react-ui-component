@@ -4,7 +4,7 @@
     "target": "es5",
     "allowJs": true,
     "checkJs": false,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "outDir": "./build",
     "rootDir": "./src",
     "removeComments": true,
