@@ -49,7 +49,7 @@ const Menu: React.FC<MenuProps> = (props) => {
     'menu-vertical': mode === 'vertical',
   })
   return (
-    <ul className={classes} style={style}>
+    <ul className={classes} style={style} data-testid="test-menu">
       <MenuContext.Provider value={passedContext}>
         {children}
       </MenuContext.Provider>
@@ -60,7 +60,7 @@ const Menu: React.FC<MenuProps> = (props) => {
 Menu.defaultProps = {
   defaultIndex: 0,
   className: '',
-  mode: 'vertical'
+  mode: 'horizontal'
 }
 
 export default Menu
