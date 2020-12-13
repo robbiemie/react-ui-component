@@ -9,6 +9,7 @@ const App = () => {
       <MenuItem index={0}>123</MenuItem>
       <MenuItem index={1} disabled>124</MenuItem>
       <MenuItem index={2}>125</MenuItem>
+      <li>123</li>
     </Menu>
   </div>
 }
