@@ -46,11 +46,10 @@ describe('test Menu and MenuItem', () => {
 
   })
   it("case2: checkout clicke items and exec right callback", () => {
-    // const thirdElement = wrapper.getByText('clicked')
-    // fireEvent.click(thirdElement)
-    // expect(testProps.onSelecte).toHaveBeenCalledWith(2)
-    // expect(thirdElement).toHaveClass("menu-item is-active")
-    const disabledElement = wrapper.getByText('disabled')
+    const thirdElement = wrapper.getByText('clicked')
+    fireEvent.click(thirdElement)
+    expect(testProps.onSelecte).toHaveBeenCalledWith(2)
+    expect(thirdElement).toHaveClass("menu-item is-active")
     fireEvent.click(disabledElement)
     expect(disabledElement).not.toHaveClass('is-active')
     expect(testProps.onSelecte).not.toHaveBeenCalledWith(1)
