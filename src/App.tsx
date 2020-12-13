@@ -1,17 +1,15 @@
 import React from "react"
-import Button, {
-  ButtonSize,
-  ButtonType
-} from  "./componenets/Button/button"
+
+import Menu from "./componenets/Menu/menu"
+import MenuItem from "./componenets/Menu/menuItem"
+
 const App = () => {
   return <div>
-    <Button btnType={ButtonType.Primary} onClick={()=>{console.log('test')}}>123</Button>
-    <Button btnType={ButtonType.Danger} disabled>123</Button>
-    <Button btnType={ButtonType.Default} autoFocus>123</Button>
-    <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>123</Button>
-    <Button btnType={ButtonType.Primary} size={ButtonSize.Small}>123</Button>
-    <Button btnType={ButtonType.Link} href="https://www.baidu.com" target="_blank">123</Button>
-    <Button btnType={ButtonType.Link} href="https://www.baidu.com" disabled>123</Button>
+    <Menu onSelecte={(index)=>{console.log(index)}}>
+      <MenuItem index={0}>123</MenuItem>
+      <MenuItem index={1} disabled>124</MenuItem>
+      <MenuItem index={2}>125</MenuItem>
+    </Menu>
   </div>
 }
 export default App
