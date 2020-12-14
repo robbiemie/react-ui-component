@@ -1,13 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withInfo } from '@storybook/addon-info';
 
 // 引入组件
 import Button, {ButtonType , ButtonSize} from './button';
 
 const styles:React.CSSProperties = {
-  textAlign: 'center'
+  // textAlign: 'center'
 }
 // 自定义插件
 const generateDecorator = (fn:any) => <div style={styles}>{fn()}</div>
@@ -36,16 +35,18 @@ const btnWithType = () => {
 
 (storiesOf('Button', module) as any)
   .addDecorator(generateDecorator) // 引入自定义插件
-  .addDecorator(withInfo)
-  .addParameters({
-    info: {
-      inline: false,
-    }
-  })
   .add('默认 button', defaultBtn, {
     info: {
       inline: true
     }
   })
-  .add('不同尺寸 button', btnWithSize)
-  .add('不同类型 button', btnWithType)
+  .add('不同尺寸 button', btnWithSize, {
+    info: {
+      inline: true
+    }
+  })
+  .add('不同类型 button', btnWithType, {
+    info: {
+      inline: true
+    }
+  })
