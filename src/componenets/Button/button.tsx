@@ -16,10 +16,14 @@ export enum ButtonType  {
 
 export interface BaseButtonProps {
   className?: string;
+  /** 是否禁用 */
   disabled?: boolean;
+  /** 设置按钮尺寸 */
   size?: ButtonSize;
+  /** 设置按钮类型 */
   btnType?: ButtonType;
   children: React.ReactNode
+  /** 跳转链接 */
   href?: string;
 }
 // 联合类型
@@ -29,6 +33,11 @@ type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
 // 将属性值设置为可选类型
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
+/**
+ * Button 按钮
+ * @constructor
+ * @param {object} props 按钮参数 
+ */
 export const Button:FC<ButtonProps> = (props) => {
   const {
     className,
