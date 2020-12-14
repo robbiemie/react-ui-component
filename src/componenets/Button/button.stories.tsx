@@ -33,7 +33,7 @@ const btnWithType = () => {
   </>)
 }
 
-(storiesOf('Button', module) as any)
+storiesOf('Button', module)
   .addDecorator(generateDecorator) // 引入自定义插件
   .add('默认 button', defaultBtn, {
     info: {

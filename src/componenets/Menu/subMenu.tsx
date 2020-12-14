@@ -2,14 +2,14 @@ import React, { useContext, useState } from 'react'
 import classNames from 'classnames'
 import { MenuContext } from "./menu"
 
-export interface subMenuProps {
+export interface SubMenuProps {
   index?: string;
   title: string;
   className?: string;
   style?: React.CSSProperties;
 }
 
-const SubMenu: React.FC<subMenuProps> = (props) => {
+const SubMenu: React.FC<SubMenuProps> = (props) => {
   const {
     className,
     index,
@@ -54,7 +54,7 @@ const SubMenu: React.FC<subMenuProps> = (props) => {
       'menu-open': visible
     })
     const childrenComponenet = React.Children.map(children, (child,_index) => {
-      const childComponent = child as React.FunctionComponentElement<subMenuProps>
+      const childComponent = child as React.FunctionComponentElement<SubMenuProps>
       const { displayName } = childComponent.type
       if(displayName === 'MenuItem') {
         return React.cloneElement(childComponent, {
