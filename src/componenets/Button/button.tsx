@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {ButtonHTMLAttributes, AnchorHTMLAttributes, FC} from 'react'
 import classNames from 'classnames'
 
 export enum ButtonSize {
@@ -14,7 +14,7 @@ export enum ButtonType  {
   Link = 'link'
 }
 
-interface BaseButtonProps {
+export interface BaseButtonProps {
   className?: string;
   disabled?: boolean;
   size?: ButtonSize;
@@ -24,12 +24,12 @@ interface BaseButtonProps {
 }
 // 联合类型
 // 复用 props 元素值
-type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>
-type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>
+type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
+type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
 // 将属性值设置为可选类型
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
-const Button:React.FC<ButtonProps> = (props) => {
+export const Button:FC<ButtonProps> = (props) => {
   const {
     className,
     btnType,
@@ -74,6 +74,6 @@ Button.defaultProps = {
   className: '',
   size: ButtonSize.Normal,
   btnType: ButtonType.Default
-}
+};
 
-export default Button
+export default Button;

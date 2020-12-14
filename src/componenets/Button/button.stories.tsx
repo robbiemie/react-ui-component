@@ -35,7 +35,7 @@ const btnWithType = () => {
 }
 
 (storiesOf('Button', module) as any)
-  // .addDecorator(generateDecorator) // 引入自定义插件
+  .addDecorator(generateDecorator) // 引入自定义插件
   .addDecorator(withInfo)
   .addParameters({
     info: {
