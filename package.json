@@ -24,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-ts": "tsc -p tsconfig-build.json",
+    "build-ts": "tsc -p tsconfig.json",
+    "build-css": "node-sass ./src/styles/index.scss ./build/index.css",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

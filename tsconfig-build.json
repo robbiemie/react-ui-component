@@ -1,13 +1,27 @@
 {
   "compilerOptions": {
-    "outDir": "build", // 输出路径
     "module": "esnext", // 输出的模块类型
     "target": "es5", // 指定导出的 ES 版本号
-    "declaration": true,
     "jsx": "react",
+    "outDir": "./build", // 输出路径
+    "rootDir": "./src",
+    "removeComments": true,
+    "noEmit": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "strict": true,
     "moduleResolution": "node",
+    "esModuleInterop": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
   "include": [
     "src"
