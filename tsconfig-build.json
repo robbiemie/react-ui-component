@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "build", // 输出路径
+    "module": "esnext", // 输出的模块类型
+    "target": "es5", // 指定导出的 ES 版本号
+    "declaration": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx"
+  ]
+}

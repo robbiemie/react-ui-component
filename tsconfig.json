@@ -2,8 +2,6 @@
   "compilerOptions": {
     "module": "esnext", // 输出的模块类型
     "target": "es5", // 指定导出的 ES 版本号
-    "allowJs": true,
-    "checkJs": false,
     "jsx": "react",
     "outDir": "./build", // 输出路径
     "rootDir": "./src",
@@ -26,10 +24,10 @@
     "isolatedModules": true
   },
   "include": [
-    "./src/**/*"
+    "src"
   ],
   "exclude": [
-    "node_modules/",
+    "node_modules",
     "src/**/*.test.tsx",
     "src/**/*.stories.tsx"
   ]
