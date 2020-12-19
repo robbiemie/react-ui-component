@@ -22,6 +22,9 @@
     "typescript": "^4.1.3",
     "web-vitals": "^0.2.4"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "npx rimraf ./dist && npm run build-ts && npm run build-css",
@@ -30,7 +33,8 @@
     "build-ts": "tsc -p tsconfig.json",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepublish": "npm run build"
   },
   "eslintConfig": {
     "extends": [
